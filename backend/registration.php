@@ -35,16 +35,13 @@
         mysqli_stmt_bind_param($stmt, 'sss', $login, $email, $hashed_password);
 
         if (mysqli_stmt_execute($stmt)) { // Выполняем запрос, и сразу проверяем выполнился ли он корректно
-          $_SESSION['success'] = 'Регистрация прошла успешно!';
+          header('Location: ../index.php');
+          exit(); 
         } else {
           $_SESSION['error'] = 'Ошибка при регистрации'; 
         }
         
         mysqli_stmt_close($stmt); // Закрываем сойденение
-
-        header('Location: ../forms/signup.php');
-        exit();
-
       } else {
         $_SESSION['error'] = 'Пароли не совпадают';
         header('Location: ../forms/signup.php');

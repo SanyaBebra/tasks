@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('./reset.css');
 
 body {
   font-family: sans-serif;
@@ -58,18 +54,12 @@ button {
 }
 
 p {
+  text-align: center;
   margin-top: 20px;
 }
 
 .error {
   color: #ff1212;
-}
- 
-.success {
-  color: #16ff16
-}
-
-.error, .success {
   margin-top: 20px;
   text-align: center;
 }

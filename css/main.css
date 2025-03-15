@@ -1,0 +1,47 @@
+@import url('./reset.css');
+
+body {
+  font-family: sans-serif;
+}
+
+.header__container {
+  padding: 0 100px;
+}
+
+.header__navbar {
+  display: grid;
+  grid-template-columns: 200px 1fr 100px;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__imege{
+  width: 200px;
+}
+
+.header__logo-text {
+  font-size: 20px;
+}
+
+.header__profile-logo {
+  width: 100px;
+}
+
+.header__btn {
+  text-decoration: none;
+  color: white;
+  background: black;
+  padding: 10px 15px;
+  border-radius: 50px;
+
+  justify-self: end;
+}
+
+.header__btns {
+  justify-self: end;
+  padding: 0 20px;
+}
