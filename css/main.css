@@ -45,3 +45,42 @@ body {
   justify-self: end;
   padding: 0 20px;
 }
+
+/* Main */
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main__input {
+  display: flex;
+  justify-content: center;
+}
+
+.main__input > input {
+  min-width: 50%;
+  padding: 10px 20px;
+  border: black 1px solid;
+  border-radius: 50px;
+}
+
+.task {
+  border: 1px solid #414141;
+  border-radius: 20px;
+  padding: 10px 20px;
+
+  display: flex;
+  gap: 20px;
+
+  width: 60%;
+}
+
+.main__wrapper {
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}

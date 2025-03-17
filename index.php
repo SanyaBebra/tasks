@@ -21,7 +21,7 @@
             <a class="header__btn" href="./forms/signin.php">Sign In</a>
           </div>
           <div class="header__profile">
-            <img class="header__profile-logo" src="./images/profile.jpg" alt="profile">
+            <img class="header__profile-logo" src="images/profile.jpg" alt="profile">
           </div>
         </div>
       </div>
@@ -31,14 +31,56 @@
 
     <main class="main">
       <div class="container">
-
+        <form class="main__input" action="backend/addTask" method="POST">
+          <input type="text" name="task_text" placeholder="Введите задачу">
+        </form>
+        <div class="main__wrapper">
+          <div class="task">
+            <input type="checkbox" name="checkbox">
+            <p>Lorem ipsum dolor, sit amet consectetur 
+              adipisicing elit. Error minus vitae molestiae 
+              necessitatibus repellat accusantium dolores 
+              optio amet, eos hic atque ullam suscipit at 
+              reiciendis debitis in nihil libero perspiciatis.</p>
+          </div>
+          <div class="task">
+            <input type="checkbox" name="checkbox">
+            <p>Lorem ipsum dolor, sit amet consectetur 
+              adipisicing elit. Error minus vitae molestiae 
+              necessitatibus repellat accusantium dolores 
+              optio amet, eos hic atque ullam suscipit at 
+              reiciendis debitis in nihil libero perspiciatis.</p>
+          </div>
+          <div class="task">
+            <input type="checkbox" name="checkbox">
+            <p>Lorem ipsum dolor, sit amet consectetur 
+              adipisicing elit. Error minus vitae molestiae 
+              necessitatibus repellat accusantium dolores 
+              optio amet, eos hic atque ullam suscipit at 
+              reiciendis debitis in nihil libero perspiciatis.</p>
+          </div>
+          <div class="task">
+            <input type="checkbox" name="checkbox">
+            <p>Lorem ipsum dolor, sit amet consectetur 
+              adipisicing elit. Error minus vitae molestiae 
+              necessitatibus repellat accusantium dolores 
+              optio amet, eos hic atque ullam suscipit at 
+              reiciendis debitis in nihil libero perspiciatis.</p>
+          </div>
+        </div>
       </div>
     </main>
+
+
+
+
     <footer class="footer">
       <div class="container">
 
       </div>
     </footer>
   </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
