@@ -1,3 +1,5 @@
+<?php require_once "backend/connect.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,42 +33,21 @@
 
     <main class="main">
       <div class="container">
-        <form class="main__input" action="backend/addTask" method="POST">
+
+        <form class="main__input" action="backend/addTask.php" method="POST">
           <input type="text" name="task_text" placeholder="Введите задачу">
         </form>
+
         <div class="main__wrapper">
-          <div class="task">
-            <input type="checkbox" name="checkbox">
-            <p>Lorem ipsum dolor, sit amet consectetur 
-              adipisicing elit. Error minus vitae molestiae 
-              necessitatibus repellat accusantium dolores 
-              optio amet, eos hic atque ullam suscipit at 
-              reiciendis debitis in nihil libero perspiciatis.</p>
-          </div>
-          <div class="task">
-            <input type="checkbox" name="checkbox">
-            <p>Lorem ipsum dolor, sit amet consectetur 
-              adipisicing elit. Error minus vitae molestiae 
-              necessitatibus repellat accusantium dolores 
-              optio amet, eos hic atque ullam suscipit at 
-              reiciendis debitis in nihil libero perspiciatis.</p>
-          </div>
-          <div class="task">
-            <input type="checkbox" name="checkbox">
-            <p>Lorem ipsum dolor, sit amet consectetur 
-              adipisicing elit. Error minus vitae molestiae 
-              necessitatibus repellat accusantium dolores 
-              optio amet, eos hic atque ullam suscipit at 
-              reiciendis debitis in nihil libero perspiciatis.</p>
-          </div>
-          <div class="task">
-            <input type="checkbox" name="checkbox">
-            <p>Lorem ipsum dolor, sit amet consectetur 
-              adipisicing elit. Error minus vitae molestiae 
-              necessitatibus repellat accusantium dolores 
-              optio amet, eos hic atque ullam suscipit at 
-              reiciendis debitis in nihil libero perspiciatis.</p>
-          </div>
+
+          <!-- Block Task -->
+
+          <?php 
+          
+          // ...
+          
+          ?>
+
         </div>
       </div>
     </main>
