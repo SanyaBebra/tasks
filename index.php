@@ -1,4 +1,7 @@
-<?php require_once "backend/connect.php" ?>
+<?php 
+require_once "backend/connect.php";
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +46,20 @@
           <!-- Block Task -->
 
           <?php 
-          
-          // ...
-          
+
+          $stmt = mysqli_prepare($connect, "SELECT task_text FROM task WHERE user_id = ?");
+          mysqli_stmt_bind_param($stmt, 'i', $_SESSION['id']);
+          mysqli_stmt_execute($stmt);
+
+          $result = mysqli_stmt_get_result($stmt);
+
+          while ($row = mysqli_fetch_assoc($result)) {
+            echo "<div class='task'>
+                    <input type='checkbox' name='checkbox'>
+                    <p>".$row['task_text']."</p>
+                  </div>";
+          }
+
           ?>
 
         </div>

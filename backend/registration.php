@@ -35,8 +35,13 @@
         mysqli_stmt_bind_param($stmt, 'sss', $login, $email, $hashed_password);
 
         if (mysqli_stmt_execute($stmt)) { // Выполняем запрос, и сразу проверяем выполнился ли он корректно
+
+          $_SESSION['id'] = mysqli_insert_id($connect);
+          mysqli_stmt_close($stmt);
+
           header('Location: ../index.php');
-          exit(); 
+          exit();                                                                         
+
         } else {
           $_SESSION['error'] = 'Ошибка при регистрации'; 
         }
