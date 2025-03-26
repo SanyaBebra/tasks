@@ -52,7 +52,9 @@ session_start();
 
     <footer class="footer">
       <div class="container">
-
+        <div class="footer__wrapper">
+          Проект для портфолио. Технологии которые использовались: HTML, CSS, JavaScript, PHP, MySQL, REST API
+        </div>
       </div>
     </footer>
   </div>
