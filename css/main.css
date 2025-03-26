@@ -70,7 +70,8 @@ body {
   border-radius: 20px;
   padding: 10px 20px;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 20px;
 
@@ -80,9 +81,13 @@ body {
 }
 
 .task p {
-  flex: 1;
   word-break: break-word; /* Принудительный перенос слов */
   white-space: normal; /* Обычный перенос строк */
+}
+
+.task img {
+  width: 18px;
+  cursor: pointer;
 }
 
 .main__wrapper {
