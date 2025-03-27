@@ -19,6 +19,11 @@ html, body {
   flex: 1;
 }
 
+.input__error {
+  margin-top: 20px;;
+  text-align: center;
+}
+
 .header__container {
   padding: 0 100px;
 }

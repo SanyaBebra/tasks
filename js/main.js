@@ -1,6 +1,34 @@
 'use strict';
 
 const mainWrapper = document.querySelector('.main__wrapper');
+const mainInput = document.querySelector('.main__input');
+
+loadTasks();
+
+mainInput.addEventListener('submit', function (event) {
+  event.preventDefault();
+  
+  const formData = new FormData(this);
+  const jsonData = JSON.stringify(Object.fromEntries(formData.entries()));
+
+  document.querySelector('.main__input > input').value = '';
+
+  fetch('backend/addTask.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: jsonData
+  })
+  .then(res => res.text())
+  .then(data => {
+    const divError = document.querySelector('.input__error');
+    divError.style.color = 'red';
+    divError.innerHTML = data;
+    loadTasks();
+  })
+  .catch(err => console.log(err));
+});
 
 mainWrapper.addEventListener('change', event => {
   if (event.target.type === 'checkbox') {
@@ -8,8 +36,6 @@ mainWrapper.addEventListener('change', event => {
     event.target.nextElementSibling.style.color = event.target.checked ? 'gray' : 'black';
   }
 });
-
-loadTasks();
 
 mainWrapper.addEventListener('click', (event) => {
   if (event.target.classList.contains('delete-btn')) {

@@ -37,9 +37,12 @@ session_start();
     <main class="main">
       <div class="container">
 
-        <form class="main__input" action="backend/addTask.php" method="POST">
+        <form class="main__input">
           <input type="text" name="task_text" placeholder="Введите задачу">
         </form>
+        <div class="input__error">
+          <!-- Error -->
+        </div>
 
         <div class="main__wrapper">
           <!-- Block Task -->
