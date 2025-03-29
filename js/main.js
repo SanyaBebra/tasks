@@ -5,6 +5,20 @@ const mainInput = document.querySelector('.main__input');
 
 loadTasks();
 
+if (document.querySelector('.header__log-out')) {
+  document.querySelector('.header__log-out').addEventListener('click', () => {
+    fetch('backend/logOut.php', {
+      method: 'POST',
+      credentials: 'same-origin'
+    })
+    .then(res => {
+      if (res.ok) {
+        window.location.reload();
+      }
+    });
+  });
+}
+
 mainInput.addEventListener('submit', function (event) {
   event.preventDefault();
   
@@ -30,7 +44,7 @@ mainInput.addEventListener('submit', function (event) {
   .catch(err => console.log(err));
 });
 
-mainWrapper.addEventListener('change', event => {
+mainWrapper.addEventListener('change', (event) => {
   if (event.target.type === 'checkbox') {
     event.target.nextElementSibling.style.textDecoration = event.target.checked ? "line-through" : "none";
     event.target.nextElementSibling.style.color = event.target.checked ? 'gray' : 'black';
@@ -60,7 +74,6 @@ function loadTasks() {
   fetch('backend/loadTasks.php')
   .then(res => res.json())
   .then(data => {
-    console.log(data);
     mainWrapper.innerHTML = '';
     data.forEach(task => {
       mainWrapper.appendChild(createTaskBlock(task['task_text'], task['id']));

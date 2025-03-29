@@ -16,7 +16,7 @@
       $user_id = $_SESSION['id'];
       $created_at = date("Y-m-d", time());
 
-      if (!empty($task_text)) {
+      if (!empty(trim($task_text))) {
         $stmt = mysqli_prepare($connect, 'INSERT INTO `task` (`id`, `user_id`, `task_text`, `created_at`) VALUES (NULL, ?, ?, ?)');
         mysqli_stmt_bind_param($stmt, 'sss', $user_id, $task_text, $created_at);
         mysqli_stmt_execute($stmt);

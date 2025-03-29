@@ -61,6 +61,12 @@ html, body {
   justify-self: end;
 }
 
+
+.header__log-out {
+  border: none;
+  cursor: pointer;
+}
+
 .header__btns {
   justify-self: end;
   padding: 0 20px;
@@ -123,7 +129,7 @@ html, body {
 .footer {
   background: #1b1b1b;
   color: #ebebeb;
-  height: 180px;
+  min-height: 180px;
 }
 
 .footer__wrapper {

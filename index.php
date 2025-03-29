@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +19,12 @@
             <span class="header__logo-text">Task Manager</span>
           </div>
           <div class="header__btns">
-            <a class="header__btn" href="./forms/signup.php">Sign Up</a>
-            <a class="header__btn" href="./forms/signin.php">Sign In</a>
+            <?php if (isset($_SESSION['id'])) {?>
+              <button class="header__btn header__log-out">Log Out</button>
+            <?php } else {?>
+              <a class="header__btn" href="./forms/signup.php">Sign Up</a>
+              <a class="header__btn" href="./forms/signin.php">Sign In</a>
+            <?php } ?>
           </div>
           <div class="header__profile">
             <img class="header__profile-logo" src="images/profile.jpg" alt="profile">
